@@ -1,0 +1,40 @@
+.image-card {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+    overflow: clip;
+
+    &:hover {
+        .image-card-overlay {
+            bottom: 0;
+            visibility: visible;
+        }
+    }
+
+    .image-card-overlay {
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        left: 0;
+        bottom: -100%;
+        transition: all 500ms ease 0s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .icon {
+            color: white;
+            font-size: 50px;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 500ms ease 0s;
+    }
+}
